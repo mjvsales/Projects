@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    header {
+        background: #333;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    .container {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    .column {
+        float: left;
+    }
+    .left {
+        width: 40%;
+        padding: 20px;
+    }
+    .right {
+        width: 50%;
+        text-align: center;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .portfolio-grid {
+        display: flex;
+        gap: 10px;
+    }
+    .portfolio-item {
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+    .portfolio-item:hover {
+        transform: scale(1.1);
+    }
+    button:hover {
+        background: #444;
+        color: white;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="column left">
+            <section id="about">
+                <h1>About Me</h1>
+                <p><strong>Name:</strong> John Vincent R. Sales</p>
+                <p><strong>Address:</strong> Gate 16 Area D Parola Compound Tondo, Manila</p>
+                <p><strong>Contact No.:</strong> 09662180220</p>
+                <p><strong>Email:</strong> mjvsales@tip.edu.ph</p>
+                <h2>Education</h2>
+                <p><strong>Jose Abad Santos Senior High School</strong><br>Numancia St., Binondo, Manila<br>Years Attended: 2021-2023</p>
+                <p><strong>Jose Abad Santos High School</strong><br>Numancia St., Binondo, Manila<br>Years Attended: 2017-2021</p>
+                <p><strong>Pedro Guevara Elementary School</strong><br>302 San Fernando St, San Nicolas, Manila</p>
+            </section>
+        </div>
+
+        <div class="column right">
+            <img src="https://scontent.fmnl31-1.fna.fbcdn.net/v/t39.30808-1/242197436_100851019029230_7409220073809992431_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGoX5_HLuOchMKJOm5z5WvlSv08KW7ww6ZK_TwpbvDDpnz4rlBXLkGbbfHf3w-NJvbnrSbuhnbGss3wqbV_wT48&_nc_ohc=sQz-z8uIAeYQ7kNvgGMOEH3&_nc_oc=AdjiFZKFcm_YICOo82yw2yE0UTR_u1OCktZvAXwBE27wJYMLeuLaM5Bw4Nq5xI-ieBY&_nc_zt=24&_nc_ht=scontent.fmnl31-1.fna&_nc_gid=A6layXRGP7s1_j69Q-HqhG4&oh=00_AYHgnXIZWAuMbklofAMbsEA23CCsZbgsMEIcgUCVM-CknA&oe=67D6C595" alt="Profile Picture">
+        </div>
+    </div>
+
+    <section id="portfolio">
+        <h2>My Work</h2>
+<div class="portfolio-grid">
+    <div class="portfolio-item">
+        MathBoost 
+        <a href="https://github.com/mjvsales/Projects.git">Link</a>
+        <img src="https://scontent.fmnl31-1.fna.fbcdn.net/v/t1.15752-9/351652467_990527249063841_1915724961252728262_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeFIoNdhBV9kVPTgu5duFqK7d_dig1mh15J392KDWaHXkruSoTg9MNrMDaL2GGU1zYx6WFz52IxctiG2opwa0DN6&_nc_ohc=oIzNy57S8_MQ7kNvgGNrjeI&_nc_oc=AdiBXvBswI6HvLxBLFXiuo9VdEZqWSuhrSSUPW7N-nx_I9ilTCEENsfpo5xYlFRUqbU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl31-1.fna&oh=03_Q7cD1wEaWKH7gG8-_O1jgWnl-S2T1-DhFpqP_J2gsXUWjlc6Ig&oe=67F88000" alt="MathBoost" width="50" height="50">
+    </div>
+    <div class="portfolio-item">Project 2</div>
+    <div class="portfolio-item">Project 3</div>
+</div>
+
+
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".portfolio-item").forEach(item => {
+                item.addEventListener("click", () => {
+                    alert("You clicked on " + item.textContent);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
